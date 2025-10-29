@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Thiệp báo hỷ</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&display=swap" rel="stylesheet">
+  <!-- <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet"> -->
+</head>
+<script>
+  // Đặt ngày cưới
+  const weddingDate = new Date("Oct 12, 2025 13:00:00").getTime();
+
+  const countdown = setInterval(function() {
+    const now = new Date().getTime();
+    const distance = weddingDate - now;
+
+    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+    document.getElementById("timer").innerHTML =
+      (days < 10 ? "0" : "") + days + " : " +
+      (hours < 10 ? "0" : "") + hours + " : " +
+      (minutes < 10 ? "0" : "") + minutes + " : " +
+      (seconds < 10 ? "0" : "") + seconds;
+
+    if (distance < 0) {
+      clearInterval(countdown);
+      document.getElementById("timer").innerHTML = "HAPPY WEDDING 💖";
+    }
+  }, 1000);
+</script>
+
+<body>
+<!-- Hero Section -->
+<section class="wedding-hero">
+  <div class="overlay">
+    <h2 class="hero-script">We get married!</h2>
+    <h1 class="hero-names">HOÀNG HẢI<span>&</span class="hero-names">THU PHƯƠNG</h1>
+  </div>
+</section>
+  <!-- Phần Save the Date -->
+  <section class="wedding-save">
+    <h2>QUYẾT ĐỊNH BÊN NHAU<br>TRỌN ĐỜI</h2>
+    <p class="sub-text">Save the date</p>
+    <p class="date">12.10.2025</p>
+    <div class="photo-frame">
+      <img src="img/pic1.jpg" alt="Couple photo">
+    </div>
+  </section>
+<!-- KHỐI PHÁT NHẠC -->
+<section class="music-player">
+  <div class="music-container">
+    <div class="album-art">
+      <img id="albumImage" src="img/pic4.JPG" alt="Ảnh cưới">
+    </div>
+    <h3 class="song-title">Lễ đường - KAIDINH</h3>
+
+    <audio id="weddingSong" autoplay>
+      <source src="music/LỄ ĐƯỜNG.mp3" type="audio/mpeg">
+      Trình duyệt của bạn không hỗ trợ phát nhạc.
+    </audio>
+  </div>
+
+  <!-- Các nút điều khiển -->
+  <div class="player-controls">
+    <div class="icon-btn">⏮</div>
+    <div class="play-btn" id="playBtn"><span>▶</span></div>
+    <div class="icon-btn">⏭</div>
+  </div>
+</section>
+
+  <!-- PHẦN LỊCH + LỜI MỜI -->
+  <section class="wedding-calendar">
+  <h2 class="month-title">October 2025</h2>
+  <div class="calendar">
+    <div class="weekdays">
+      <span>MON</span><span>TUE</span><span>WED</span>
+      <span>THU</span><span>FRI</span><span>SAT</span><span>SUN</span>
+    </div>
+    <div class="days">
+      <!-- Tuần 1: trống cho đến thứ Tư -->
+      <span></span><span></span><span>1</span><span>2</span><span>3</span><span>4</span><span>5</span>
+      <!-- Tuần 2 -->
+      <span>6</span><span>7</span><span>8</span><span>9</span><span>10</span><span>11</span><span class="highlight">12</span>
+      <!-- Tuần 3 -->
+      <span>13</span><span>14</span><span>15</span><span>16</span><span>17</span><span>18</span><span>19</span>
+      <!-- Tuần 4 -->
+      <span>20</span><span>21</span><span>22</span><span>23</span><span>24</span><span>25</span><span>26</span>
+      <!-- Tuần 5 -->
+      <span>27</span><span>28</span><span>29</span><span>30</span><span>31</span><span></span><span></span>
+    </div>
+  </div>
+  <p class="invite-text">Thân mời tới dự lễ cưới thân mật của chúng tôi</p>
+  <h2 class="couple-name">HOÀNG HẢI ❤️ <span></span> THU PHƯƠNG</h2>
+</section>
+
+    <!--PHẦN ẢNH CÔ DÂU CHÚ RỂ-->
+    <section class="wedding-couple">
+  <div class="couple-box">
+    <div class="photos">
+      <img src="img/bride.JPG" alt="Groom" class="polaroid left">
+      <img src="img/groom.JPG" alt="Bride" class="polaroid right">
+    </div>
+  </div>
+
+</section>
+   <!-- PHẦN GIỜ CƯỚI
+    
+  <section class="wedding-time">
+    <div class="photos">
+      <img src="img/bride.JPG" alt="Groom" class="polaroid left">
+      <img src="img/groom.JPG" alt="Bride" class="polaroid right">
+    </div>
+    <div class="time-info">
+      <p>LỄ THÀNH HÔN ĐƯỢC CHỨC</p>
+      <p>VÀO LÚC <strong>13 GIỜ 00 PHÚT</strong></p>
+      <p class="day">CHỦ NHẬT</p>
+      <h2 class="big-date">12</h2>
+    </div>
+  </section> -->
+
+<!-- PHẦN ĐỊA ĐIỂM -->
+<section class="wedding-location">
+  <div class="location-wrapper">
+    <div class="time-place">
+      <h2>LỄ THÀNH HÔN ĐƯỢC CHỨC<br>VÀO LÚC <span>13 GIỜ 00 PHÚT</span></h2>
+      <p class="day">CHỦ NHẬT</p>
+      <div class="date-block">
+        <span class="month">THÁNG 10</span>
+        <span class="big-date">12</span>
+        <span class="year">NĂM 2025</span>
+      </div>
+      <p class="note">(Tức ngày 21 tháng 08 năm Ất Tỵ)</p>
+      </div>
+    </div>
+      
+    <!-- Nhà trai , nhà gái-->
+  <div class="location-wrappers">
+  <div class="location-section">
+  <h2 class="section-title">ĐỊA ĐIỂM TỔ CHỨC</h2>
+
+  <div class="location-box">
+    <div class="location-item">
+      <div class="location-icon">📍</div>
+      <div class="location-info">
+        <h3 class="location-title">NHÀ TRAI</h3>
+        <p>Tư gia nhà Trai</p>
+        <p>Thôn Tế Cát, xã Nam Xang,<br>tỉnh Ninh Bình</p>
+      </div>
+      <a href="#" class="direction-btn">Xem Chỉ Đường</a>
+    </div>
+
+    <hr class="divider">
+
+    <div class="location-item">
+      <div class="location-icon">📍</div>
+      <div class="location-info">
+        <h3 class="location-title">NHÀ GÁI</h3>
+        <p>Tư gia nhà Gái</p>
+        <p>Thôn Hội Động, xã Nam Xang,<br>tỉnh Ninh Bình</p>
+      </div>
+      <a href="#" class="direction-btn">Xem Chỉ Đường</a>
+    </div>
+  </div>
+</div>
+</div>
+
+  <!-- Ảnh chung -->
+ 
+    <div class="family-photo">
+      <img src="img/pic7.JPG" alt="Family Photo">
+    </div>
+</section>
+
+
+<!-- ALBUM ẢNH CƯỚI --> 
+   <section class="wedding-album">
+  <h1>Album Ảnh Cưới</h1>
+  <div class="album-grid">
+    <div class="album-item item1"><img src="img/pic12.JPG" alt="Ảnh 1"></div>
+    <div class="album-item item2"><img src="img/pic13.JPG" alt="Ảnh 2"></div>
+    <div class="album-item item3"><img src="img/pic5.JPG" alt="Ảnh 3"></div>
+    <div class="album-item item4"><img src="img/pic10.JPG" alt="Ảnh 4"></div>
+    <div class="album-item item5"><img src="img/pic9.JPG" alt="Ảnh 5"></div>
+    <div class="album-item item6"><img src="img/pic11.JPG" alt="Ảnh 9"></div>
+  </div>
+</section>
+
+ <!-- PHẦN RSVP & COUNTDOWN -->
+  <section class="wedding-rsvp">
+
+    <div class="countdown">
+      <h3>Countdown</h3>
+      <div id="timer">00 : 00 : 00 : 00</div>
+    </div>
+  </section>
+
+  <!-- PHẦN THANK YOU -->
+  <section class="wedding-thanks">
+    <div class="thanks-text">
+      <p>Cảm ơn bạn đã dành thời gian quý báu để đến chung vui cùng chúng mình! 
+      Sự hiện diện của bạn chính là món quà ý nghĩa nhất, 
+      và chúng mình vô cùng trân quý khi được cùng bạn chia sẻ niềm hạnh phúc 
+      trong ngày trọng đại này.</p>
+      <h2>Thank you!</h2>
+
+  </section>
+
+</body>
+</html>
+
+<script>
+  const song = document.getElementById("weddingSong");
+  const playBtn = document.getElementById("playBtn");
+  const albumArt = document.querySelector(".album-art");
+  const playIcon = playBtn.querySelector("span");
+
+  // Khi phát nhạc
+  song.addEventListener("play", () => {
+    albumArt.style.animationPlayState = "running";
+    playIcon.textContent = "❚❚"; // đổi sang pause
+  });
+
+  // Khi dừng nhạc
+  song.addEventListener("pause", () => {
+    albumArt.style.animationPlayState = "paused";
+    playIcon.textContent = "▶"; // đổi sang play
+  });
+
+  // Nút phát/tạm dừng
+  playBtn.addEventListener("click", () => {
+    if (song.paused) {
+      song.play();
+    } else {
+      song.pause();
+    }
+  });
+
+  // Tự động phát (nếu được phép)
+  window.addEventListener("load", () => {
+    song.play().catch(() => {
+      albumArt.style.animationPlayState = "paused";
+      playIcon.textContent = "▶";
+    });
+  });
+
+  // Tự gán trái / phải xen kẽ nếu chưa có
+  const albumItems = document.querySelectorAll('.album-item');
+  albumItems.forEach((item, i) => {
+    if (!item.classList.contains('left') && !item.classList.contains('right')) {
+      item.classList.add(i % 2 === 0 ? 'left' : 'right');
+    }
+  });
+
+  // Hiệu ứng xuất hiện khi cuộn
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) entry.target.classList.add('show');
+    });
+  }, { threshold: 0.2 });
+
+  albumItems.forEach(item => observer.observe(item));;
+
+</script>
