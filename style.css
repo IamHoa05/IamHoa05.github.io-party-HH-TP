@@ -620,10 +620,10 @@ body {
   transform: translateY(0);
 }
 
-/* Wedding Invite Section */
+/* === Wedding Invite Section === */
 .wedding-invite {
   position: relative;
-  background: url("img/pic1.jpg") center/cover no-repeat;
+  background: url("img/pic2.jpg") center/cover no-repeat;
   height: 100vh;
   display: flex;
   justify-content: center;
@@ -633,71 +633,124 @@ body {
   font-family: 'Playfair Display', serif;
 }
 
+/* === Lớp phủ mờ chỉ bao quanh khung thiệp === */
 .invite-overlay {
-  background: rgba(0, 0, 0, 0.45);
-  padding: 50px 30px;
-  border: 1px solid rgba(255,255,255,0.4);
-  border-radius: 10px;
-  width: 90%;
-  max-width: 450px;
+  position: relative;
+  background: rgba(0, 0, 0, 0.16);
+  border: 1px solid rgba(255, 255, 255, 0.516);
+  border-radius: 14px;
+  width: 95%;
+  height: 95%;
+  padding: 60px 30px;
+  box-sizing: border-box;
+  backdrop-filter: blur(3px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
+/* === Viền trắng mảnh quanh khung === */
+.invite-overlay::before {
+  content: "";
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  right: 12px;
+  bottom: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  pointer-events: none;
+}
+
+/* === Tiêu đề === */
 .invite-top {
   font-family: 'Dancing Script', cursive;
-  font-size: 1.6rem;
-  margin-bottom: 15px;
+  font-size: 2rem;
+  margin-bottom: 120px;
   letter-spacing: 1px;
+  opacity: 0.95;
 }
 
+/* === Tên cô dâu chú rể === */
 .invite-names {
   font-family: 'Great Vibes', cursive;
-  font-size: 2.8rem;
-  line-height: 1.4;
+  font-size: 3.2rem;
+  line-height: 1.1;
   margin: 0 0 20px 0;
+  color: #fff;
+  
 }
 
 .invite-names span {
+  display: block;
   font-size: 2rem;
-  color: #fff;
+  margin: 4px 0;
+  opacity: 0.9;
 }
 
+.invite-names .name { font-size: 3rem; line-height: 1; letter-spacing: 0.02em; }
+.invite-names .ampersand { font-size: 2rem; transform: translateY(-6px); margin: 6px 0; }
+.invite-names .last { margin-top: -4px; }
+/* === Dòng ngăn cách (gạch ngang mảnh) === */
+.divider {
+  width: 80%;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.6);
+  margin: 25px auto;
+}
+
+/* === Phần ngày và giờ === */
 .invite-info {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  gap: 40px;
-  margin-bottom: 25px;
+  width: 80%;
+  margin: 0 auto 20px;
+  /* font-family: '', serif; */
 }
 
-.date-box, .time-box {
+.info-box {
   text-align: center;
 }
 
-.date-box p, .time-box p {
-  margin: 4px 0;
-  font-size: 1rem;
+.info-box h3 {
+  font-size: 0.9rem;
   letter-spacing: 1px;
+  margin-bottom: 8px;
+  opacity: 0.9;
+  font-weight: 400;
 }
 
 .date-box h2 {
   font-size: 3rem;
-  margin: 5px 0;
-  font-family: 'Playfair Display', serif;
+  font-weight: bold;
+  margin: 0;
 }
 
+/* === Dòng địa điểm === */
 .venue {
-  margin-top: 15px;
+  margin-top: 10px;
   font-size: 0.9rem;
+  opacity: 0.9;
 }
 
 .venue p:first-child {
   font-family: 'Dancing Script', cursive;
   font-size: 1.2rem;
-  margin-bottom: 8px;
+  margin-bottom: 6px;
 }
 
 .venue h3 {
   font-weight: bold;
   font-size: 1.1rem;
   margin: 6px 0;
+  letter-spacing: 0.5px;
+}
+
+/* === Hiệu ứng mềm mại === */
+.invite-top,
+.invite-names,
+.venue,
+.info-box {
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
 }
