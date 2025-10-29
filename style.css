@@ -642,14 +642,14 @@ location-section.single {
 .wedding-invite {
   position: relative;
   background: url("img/pic2.JPG") center/cover no-repeat;
-  height: 100vh;
+  min-height: 100vh; /* linh hoạt với màn hình nhỏ */
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
   color: #fff;
   font-family: 'Playfair Display', serif;
-  padding: 20px; /* thêm padding để tránh tràn trên màn hình nhỏ */
+  padding: 20px;
   box-sizing: border-box;
 }
 
@@ -660,9 +660,7 @@ location-section.single {
   border: 1px solid rgba(255, 255, 255, 0.516);
   border-radius: 14px;
   width: 100%;
-  max-width: 600px; /* giới hạn chiều rộng trên máy tính */
-  min-height: 90vh;
-  height: auto; /* linh hoạt theo nội dung */
+  max-width: 600px; /* desktop */
   padding: 40px 20px;
   box-sizing: border-box;
   backdrop-filter: blur(3px);
@@ -721,18 +719,19 @@ location-section.single {
 /* Ngày và giờ */
 .invite-info {
   display: flex;
-  /* flex-direction: row; điện thoại: stack dọc */
+  flex-direction: row;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap; /* tự xuống dòng khi màn hình nhỏ */
   width: 100%;
   margin: 20px 0;
   font-size: 2rem;
+  gap: 15px; /* khoảng cách giữa các box */
 }
 
 .info-box {
   text-align: center;
   font-size: 1rem;
-  margin-bottom: 10px;
 }
 
 .date-box h2 {
