@@ -378,50 +378,68 @@ body {
   padding: 50px 27px;
   box-shadow: 0 5px 15px rgba(0,0,0,0.2);
 }
+location-section.single {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+
 .location-box {
-  max-width: 400px;
-  margin: 0 auto;
-  text-align: left;
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
 .location-item {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-bottom: 20px;
+  background: #2e3a59;
+  color: white;
+  padding: 40px 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 900px;
+  text-align: center;
 }
 
-.location-icon {
-  font-size: 30px;
-  margin-right: 10px;
-}
-
-.location-info {
-  flex-grow: 1;
-  font-size: 14px;
-}
-
-.location-title {
-  font-size: 18px;
+/* Tiêu đề trong khung */
+.section-title {
+  font-size: 1.6rem;
+  letter-spacing: 1px;
+  margin-bottom: 15px;
   font-weight: bold;
-  margin-bottom: 5px;
-  text-transform: uppercase;
+  color: #fff;
 }
 
-.direction-btn {
-  background-color: white;
-  color: #d50000;
-  border: none;
-  border-radius: 20px;
-  padding: 6px 15px;
-  text-decoration: none;
+/* Icon vị trí */
+.location-icon {
+  font-size: 2rem;
+  margin: 10px 0;
+}
+
+/* Tên địa điểm */
+.location-title {
+  font-size: 1.2rem;
   font-weight: 600;
-  white-space: nowrap;
-  transition: all 0.3s ease;
+  margin-bottom: 10px;
+}
+
+/* Nút chỉ đường */
+.direction-btn {
+  display: inline-block;
+  background: #fff;
+  color: #e63946;
+  font-weight: 600;
+  padding: 10px 25px;
+  border-radius: 25px;
+  text-decoration: none;
+  transition: 0.3s ease;
+  margin-top: 15px;
 }
 
 .direction-btn:hover {
-  background-color: #ffe0e0;
+  background: #e63946;
+  color: #fff;
+  transform: scale(1.05);
 }
 
 .divider {
@@ -664,9 +682,9 @@ body {
 
 /* === Tiêu đề === */
 .invite-top {
-  font-family: 'Dancing Script', cursive;
+  font-family: 'Great Vibes', cursive;
   font-size: 2rem;
-  margin-bottom: 120px;
+  margin-bottom: 100px;
   letter-spacing: 1px;
   opacity: 0.95;
 }
@@ -676,7 +694,7 @@ body {
   font-family: 'Great Vibes', cursive;
   font-size: 3.2rem;
   line-height: 1.1;
-  margin: 0 0 20px 0;
+  margin: 0 0 10px 0;
   color: #fff;
   
 }
@@ -684,19 +702,17 @@ body {
 .invite-names span {
   display: block;
   font-size: 2rem;
-  margin: 4px 0;
+  margin: 30px 0 0 0;
   opacity: 0.9;
 }
 
-.invite-names .name { font-size: 3rem; line-height: 1; letter-spacing: 0.02em; }
-.invite-names .ampersand { font-size: 2rem; transform: translateY(-6px); margin: 6px 0; }
-.invite-names .last { margin-top: -4px; }
+
 /* === Dòng ngăn cách (gạch ngang mảnh) === */
 .divider {
   width: 80%;
   height: 1px;
   background: rgba(255, 255, 255, 0.6);
-  margin: 25px auto;
+  margin: 10px auto;
 }
 
 /* === Phần ngày và giờ === */
@@ -706,31 +722,35 @@ body {
   align-items: center;
   width: 80%;
   margin: 0 auto 20px;
+   font-size: 2rem;
   /* font-family: '', serif; */
 }
 
 .info-box {
   text-align: center;
+  font-size: 1rem;
 }
 
 .info-box h3 {
   font-size: 0.9rem;
   letter-spacing: 1px;
-  margin-bottom: 8px;
+  margin-bottom: 5px;
   opacity: 0.9;
   font-weight: 400;
+  font-size: 1rem;
 }
 
 .date-box h2 {
-  font-size: 3rem;
+  font-size: 5rem;
   font-weight: bold;
   margin: 0;
+  
 }
 
 /* === Dòng địa điểm === */
 .venue {
   margin-top: 10px;
-  font-size: 0.9rem;
+  font-size: 1.2rem;
   opacity: 0.9;
 }
 
