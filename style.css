@@ -641,7 +641,7 @@ location-section.single {
 /* === Wedding Invite Section === */
 .wedding-invite {
   position: relative;
-  background: url("img/pic2.jpg") center/cover no-repeat;
+  background: url("img/pic2.JPG") center/cover no-repeat;
   height: 100vh;
   display: flex;
   justify-content: center;
