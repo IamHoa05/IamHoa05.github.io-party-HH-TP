@@ -684,7 +684,6 @@ location-section.single {
 .invite-top {
   font-family: 'Great Vibes', cursive;
   font-size: 2rem;
-  margin-bottom: 100px;
   letter-spacing: 1px;
   opacity: 0.95;
 }
@@ -713,7 +712,7 @@ location-section.single {
   width: 80%;
   height: 1px;
   background: rgba(255, 255, 255, 0.6);
-  margin: 10px auto;
+  margin: 5px auto;
 }
 
 /* === Phần ngày và giờ === */
@@ -723,7 +722,7 @@ location-section.single {
   align-items: center;
   width: 80%;
   margin: 0 auto 20px;
-   font-size: 2rem;
+  font-size: 2rem;
   /* font-family: '', serif; */
 }
 
